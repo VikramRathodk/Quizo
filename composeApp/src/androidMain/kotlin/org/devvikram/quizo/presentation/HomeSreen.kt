@@ -23,6 +23,7 @@ import org.devvikram.quizo.utils.SharedPreference
 @Composable
 fun HomeScreen(
     navHostController: NavHostController,
+    appViewModel: AppViewModel
 ) {
     val sharedPreference = SharedPreference(LocalContext.current)
 
@@ -43,8 +44,11 @@ fun HomeScreen(
                         modifier = Modifier
                             .padding(end = 10.dp)
                             .clickable {
-                                sharedPreference.clearUser()
-                                navHostController.navigate(Destination.Login.route)
+                                appViewModel.logoutUser()
+                                navHostController.navigate(Destination.Login.route) {
+                                    popUpTo(Destination.Home.route) { inclusive = true }
+                                    launchSingleTop = true
+                                }
                             }
                     )
                 }

@@ -3,26 +3,22 @@ package org.devvikram.quizo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
+import com.google.firebase.Firebase
+import com.google.firebase.initialize
+import org.devvikram.quizo.presentation.AppViewModel
+import org.devvikram.quizo.utils.SharedPreference
 
 class MainActivity : ComponentActivity() {
+    private lateinit var sharedPreference: SharedPreference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        Firebase.initialize(this)
+        val firebase = Firebase
+        sharedPreference = SharedPreference(this)
+        val appViewmodel = AppViewModel(firebase,sharedPreference)
         setContent {
-            App()
+            App(appViewmodel)
         }
     }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
-    }
 }
 
-@Preview
-@Composable
-fun AppAndroidPreview() {
-    App()
-}

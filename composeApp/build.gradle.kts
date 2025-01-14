@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.kotlinxSerialization)
-
+    alias(libs.plugins.googleGmsGoogleServices)
 }
 
 kotlin {
@@ -25,6 +25,15 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.kotlinx.serialization.json)
+
+
+            // firebase implementation
+            implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+            implementation("com.google.firebase:firebase-analytics")
+            implementation("com.google.firebase:firebase-firestore")
+            implementation("com.google.firebase:firebase-auth")
+            implementation("com.google.firebase:firebase-storage")
+
 
 
         }

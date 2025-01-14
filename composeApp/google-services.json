@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "725186787921",
+    "project_id": "quizo-b5038",
+    "storage_bucket": "quizo-b5038.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725186787921:android:6d55e2f75c40aad7d05670",
+        "android_client_info": {
+          "package_name": "org.devvikram.quizo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725186787921-vj5h3isod3ofqp29egderhpnccjiabpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzmqfaV5HEoyn2ousNbWz67y1j52LWx9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725186787921-vj5h3isod3ofqp29egderhpnccjiabpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

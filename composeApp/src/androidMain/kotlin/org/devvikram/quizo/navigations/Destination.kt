@@ -4,7 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 sealed class Destination {
-
     abstract val route: String
 
     @Serializable
@@ -15,6 +14,9 @@ sealed class Destination {
     data object Login : Destination() {
         override val route: String = "login"
     }
-
+    @Serializable
+    data object Registration : Destination() {
+        override val route: String = "registration"
+    }
 
 }
