@@ -4,6 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 sealed class Destination {
+
     abstract val route: String
 
     @Serializable
